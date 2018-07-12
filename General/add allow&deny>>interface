@@ -1,0 +1,13 @@
+Context: Ethernet Layer 2 Switch
+Vendor Supported: Cisco, Juniper
+Command allow/deny>>interface
+Description
+  Deny (Allow) access to/from the switchport interface
+Justification: Layer2 Switching manages access at the port level. Term "port" already exists in the Language Spec (3.1.2) as an 
+  Idiom and referenced in the context of communications tranport. This could result in confusion. To avoid this, proposing the term for this TARGET 
+  to be "interface." "Interface" is the logical representation of a physical port on a layer 2 switching device. It is referenced through 
+  vendor command line interfaces in order to issue, e.g., a command to block (deny) access to the switchport. 
+Deny would be a required action.. Allow would be optional.
+Target specifier(s): interface_name, interface_ID, vlan_ID
+Arguments: traffic_type:multicast/unicast
+Arguments: source: mac_address, 
